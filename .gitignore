@@ -1,3 +1,6 @@
+.cache-main
+.cache-tests
+bin/
 .DS_Store
 ._.DS_Store*
 .metadata
