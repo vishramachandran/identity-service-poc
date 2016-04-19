@@ -51,7 +51,7 @@ object CommandProcessorImpl extends CommandProcessor {
       commandDb.upsertCommand(cmd.copy(status = "Running", startedTime = Some(DateTime.now())))
     } flatMap { c: Command =>
 
-      params match {
+     params match {
         case p: UserCreateCommandParams => createUser(c, p)
         case p: UserUpdateCommandParams => updateUser(c, p)
         case p: UserDeleteCommandParams => deleteUser(c, p)

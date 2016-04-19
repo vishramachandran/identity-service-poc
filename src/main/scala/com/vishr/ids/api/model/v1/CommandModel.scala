@@ -5,6 +5,7 @@ import java.util.UUID
 import com.vishr.ids.common.Constants._
 import org.joda.time.DateTime
 
+
 case class Command(
     commandId: UUID,
     commandType: String,
@@ -72,3 +73,5 @@ case class MembershipDeleteParams(
   override val entityId = if (groupIdOrName.matches(UuidRegex)) Some(UUID.fromString(groupIdOrName)) else None
   override val entityName = if (!groupIdOrName.matches(UuidRegex)) Some(groupIdOrName) else None
 }
+
+
